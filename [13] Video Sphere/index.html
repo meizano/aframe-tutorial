@@ -2,14 +2,14 @@
 <html>
     <head>
         <meta name="apple-mobile-web-app-capable" content="yes">
-        
-        <script src="../js/aframe.js"></script>
+        <!-- a-frame 0.8.0 broke the videosphere, so we need to use 0.7.1 -->
+        <script src="https://aframe.io/releases/0.7.1/aframe.min.js"></script>
     </head>
     
     <body>
         <a-scene>
             <a-assets>
-                <video id="SphereVideo" autoplay loop="true" src="video/SphereVideo.webm" webkit-playsinline>
+                <video id="SphereVideo" autoplay loop="true" src="video/SphereVideo.webm" webkit-playsinline/>
             </a-assets>
 
             <!-- Using the asset management system. -->
@@ -17,6 +17,9 @@
 
             <!-- Defining the URL inline. Not recommended but more comfortable for web developers. -->
             <!--<a-videosphere src="video/SphereVideo.webm"></a-videosphere>-->
+            
+            <!-- Define camera with zero user height, movement disabled and arrow key rotation added. -->
+            <a-camera user-height="0" wasd-controls-enabled="false" arrow-key-rotation></a-camera>
         </a-scene>
     </body>
 </html>

@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script src="../js/aframe.js"></script>
-    </head>
-    
-    <body>
-        <a-scene>
-            <a-assets>
-                <img id="texture" src="img/texture.jpg">
-            </a-assets>   
-            
-            <a-box color="#FFFFFF" width="1" height="1" depth="1"
-                   position="0 0 -4"
-                   rotation="45 45 45"
-                   scale="1 2.5 1"
-                   src="#texture">
-                <a-animation attribute="rotation" repeat="indefinite" to="0 360 0"></a-animation>
-            </a-box>
-        </a-scene>
-    </body>
+    <script src="../js/aframe.js"></script>
+</head>
+
+<body>
+    <a-scene>
+        <a-assets>
+            <img id="texture" src="img/texture.jpg">
+        </a-assets>
+
+        <a-box color="#FFFFFF" width="1" height="1" depth="1"
+               position="0 0 0"
+               rotation="45 45 45"
+               scale="1 2.5 1"
+               src="#texture">
+            <a-animation attribute="rotation"
+                         repeat="indefinite"
+                         to="0 360 0">
+            </a-animation>
+        </a-box>
+        <a-camera position="0 0 5">
+            <a-cursor color="#FF0000" />
+        </a-camera>
+    </a-scene>
+</body>
 </html>
